@@ -1,0 +1,88 @@
+{
+  "name": "zqs-cli",
+  "version": "1.0.0",
+  "description": "Zqs cli tool",
+  "scripts": {
+    "clean": "rimraf lib && rimraf coverage",
+    "format": "prettier --write \"{src,__tests__}/**/*.ts\" --single-quote --trailing-comma es5",
+    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
+    "prepublish": "npm run build",
+    "prebuild": "npm run clean && npm run format && npm run lint && echo Using TypeScript && tsc --version",
+    "build": "tsc --pretty",
+    "test": "jest",
+    "unit:test": "jest ./__tests__/cmd-spec.ts ",
+    "coverage": "jest --coverage",
+    "watch": "npm run build -- --watch",
+    "watch:test": "jest --watch"
+  },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToolsZhang/zqs-cli.git"
+  },
+  "author": "Zq",
+  "license": "MIT",
+  "keywords": [
+    "zqs"
+  ],
+  "files": [
+    "lib",
+    "bin",
+    "templates"
+  ],
+  "bin": {
+    "zqs": "./bin/zqs"
+  },
+  "bugs": {
+    "url": "https://github.com/ToolsZhang/zqs-cli/issues"
+  },
+  "homepage": "https://github.com/ToolsZhang/zqs-cli#readme",
+  "dependencies": {
+    "@types/colors": "^1.2.1",
+    "args": "^5.0.1",
+    "colors": "^1.4.0",
+    "english-article-classifier": "^1.0.1",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.2.0",
+    "lodash": "^4.17.15",
+    "pluralize": "^8.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/args": "^3.0.0",
+    "@types/fs-extra": "^9.0.1",
+    "@types/inquirer": "^6.5.0",
+    "@types/jest": "^25.1.0",
+    "@types/lodash": "^4.14.156",
+    "@types/node": "^8.0.0",
+    "@types/pluralize": "0.0.29",
+    "@types/request-promise": "^4.1.46",
+    "coveralls": "^3.1.0",
+    "jest": "^25.5.4",
+    "jest-environment-node-debug": "^2.0.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.1.0",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.5"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "jest": {
+    "transform": {
+      ".(ts)": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*.spec|\\.(test|spec))\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testEnvironment": "node",
+    "collectCoverage": true
+  }
+}
