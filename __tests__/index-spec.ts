@@ -25,36 +25,36 @@ describe('Index', () => {
     expect(index.startProgram).toBeTruthy();
   });
   it('should test new project', () => {
-    expect(index.startProgram(['node', 'ycs', '-n'])).toMatchObject({
+    expect(index.startProgram(['node', 'zqs', '-n'])).toMatchObject({
       new: true,
       n: true,
     });
     expect(
-      index.startProgram(['node', 'ycs', '-n', 'helloWorld'])
+      index.startProgram(['node', 'zqs', '-n', 'helloWorld'])
     ).toMatchObject({
       new: 'helloWorld',
       n: 'helloWorld',
     });
   });
   it('should test new api', () => {
-    expect(index.startProgram(['node', 'ycs', '-a'])).toMatchObject({
+    expect(index.startProgram(['node', 'zqs', '-a'])).toMatchObject({
       apiAdd: true,
       a: true,
     });
   });
   it('should add new plugin', () => {
-    expect(index.startProgram(['node', 'ycs', '-p'])).toMatchObject({
+    expect(index.startProgram(['node', 'zqs', '-p'])).toMatchObject({
       pluginAdd: true,
       p: true,
     });
   });
   it('should remove a plugin', () => {
-    expect(index.startProgram(['node', 'ycs', '-P'])).toMatchObject({
+    expect(index.startProgram(['node', 'zqs', '-P'])).toMatchObject({
       pluginRemove: true,
       P: true,
     });
   });
   it('should return flags', () => {
-    expect(index.startProgram(['node', 'ycs'])).toMatchObject({});
+    expect(index.startProgram(['node', 'zqs'])).toMatchObject({});
   });
 });
