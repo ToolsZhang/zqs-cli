@@ -1,5 +1,5 @@
 {
-  "name": "zqs-cli",
+  "name": "zqserver-cli",
   "version": "0.0.1",
   "description": "Zqs cli tool",
   "scripts": {
