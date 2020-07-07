@@ -41,14 +41,20 @@ describe('New project', () => {
   it('should create a project with prompt and overwrite', async () => {
     const flags = { new: true };
     (fs as any).existsSync.mockImplementationOnce(() => true);
-    const res = await newProject(flags, { new: 'helloWorld ', overwrite: true });
+    const res = await newProject(flags, {
+      new: 'helloWorld ',
+      overwrite: true,
+    });
     expect(res).toBe(true);
   });
 
   it('should create a project with prompt and overwrite with false', async () => {
     const flags = { new: true };
     (fs as any).existsSync.mockImplementationOnce(() => true);
-    const res = await newProject(flags, { new: 'helloWorld ', overwrite: false });
+    const res = await newProject(flags, {
+      new: 'helloWorld ',
+      overwrite: false,
+    });
     expect(res).toBe(false);
   });
 

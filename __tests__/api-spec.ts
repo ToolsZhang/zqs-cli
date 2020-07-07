@@ -27,7 +27,7 @@ describe('New api', () => {
     let answers = {
       model: 'sample',
       endpoint: '/api/samples',
-      path: '/anywhere/samples'
+      path: '/anywhere/samples',
     };
     const res = await add(flags, answers);
     expect(res).toBe(true);
@@ -39,7 +39,7 @@ describe('New api', () => {
     const res = await add(flags, {
       model: 'sample',
       endpoint: '/api/samples',
-      path: '/anywhere/samples'
+      path: '/anywhere/samples',
     });
     expect(res).toBe(true);
   });
