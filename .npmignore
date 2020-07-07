@@ -1,4 +1,5 @@
 __tests__/
+__mock__/
 .vscode/
 coverage/
 src/
