@@ -42,10 +42,10 @@ export async function add(flags: any, answers_?: any) {
   flags.path = answers.path;
 
   try {
-    //mkdir
+    // mkdir
     await fse.mkdirp(flags.path);
 
-    //readfile
+    // readfile
     const controllerTmp = await fse.readFile(
       __dirname + `/../templates/api/controller.ts`
     );
@@ -66,7 +66,7 @@ export async function add(flags: any, answers_?: any) {
       endpoint: flags.endpoint,
     };
 
-    //render template
+    // render template
     const controller = lodash.template(controllerTmp.toString())(options);
     const model = lodash.template(modelTmp.toString())(options);
     const router = lodash.template(routerTmp.toString())(options);
