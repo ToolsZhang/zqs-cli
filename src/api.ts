@@ -53,7 +53,7 @@ export async function add(flags: any, answers_?: any) {
       __dirname + `/../templates/api/model.ts`
     );
     const routerTmp = await fse.readFile(
-      __dirname + `/../templates/api/routers.ts`
+      __dirname + `/../templates/api/router.ts`
     );
 
     // prepare options
