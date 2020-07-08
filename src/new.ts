@@ -49,8 +49,8 @@ export async function newProject(flags: any, answers_?: any) {
     // rm .git
     await fse.remove(`${cwd}/${flags.new}/.git`);
 
-    // yarn
-    await run('yarn', {
+    // npm install
+    await run('npm install', {
       cwd: `${cwd}/${flags.new}`,
       stdio: 'inherit',
     });

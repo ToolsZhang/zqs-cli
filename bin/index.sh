@@ -58,7 +58,7 @@ start() {
     templatePath=`npm root -g`/@zqs/cli/templates
     if [ -e $templatePath ]; then
         cp -r $templatePath/start $1
-        cd $1 && yarn
+        cd $1 &&  npm install
     fi
 }
 
@@ -69,10 +69,10 @@ addPlugin() {
     fi
 
     if [ "$2" = "" ]; then
-        echo yarn add zqs-plugin-$1
-        yarn add zqs-plugin-$1
+        echo npm install zqs-plugin-$1
+        npm install zqs-plugin-$1
     else
-        yarn add zqs-plugin-$1@$2
+        npm install zqs-plugin-$1@$2
     fi
 
     if [ -e src/plugins/$1.ts ]; then
@@ -197,7 +197,7 @@ removePlugin() {
         return
     fi
 
-    yarn remove zqs-plugin-$1
+    npm uninstall zqs-plugin-$1
 
     if [ -e src/plugins/$1.ts ]; then
         echo rm src/plugins/$1.ts | _color_ yellow

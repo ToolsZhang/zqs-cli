@@ -26,8 +26,8 @@ export async function add(flags: any, answers_?: any) {
   flags.plugin = answers.plugin;
 
   try {
-    // yarn
-    await run(`yarn add zqs-plugin-${flags.plugin}`, {
+    // npm install
+    await run(`npm install zqs-plugin-${flags.plugin}`, {
       cwd: `${cwd}`,
       stdio: 'inherit',
     });
@@ -69,11 +69,11 @@ export async function remove(flags: any, answers_?: any) {
   if (!flags.plugins.length) return false;
 
   try {
-    // yarn
+    // npm install
     const plugins = flags.plugins
       .map((x: string) => 'zqs-plugin-' + x)
       .join(' ');
-    await run(`yarn remove ${plugins}`, {
+    await run(`npm uninstall ${plugins}`, {
       cwd: `${cwd}`,
       stdio: 'inherit',
     });
