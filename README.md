@@ -8,7 +8,7 @@ To see the project structure here [zqs-base](https://github.com/ToolsZhang/zqs-b
 
 # Installation
 ```
-npm i -g zqs-cli
+npm i -g zqserver-cli
 ```
 
 # Usage
