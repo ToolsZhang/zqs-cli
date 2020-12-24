@@ -43,13 +43,13 @@ describe('Index', () => {
     });
   });
   it('should add new plugin', () => {
-    expect(index.startProgram(['node', 'zqs', '-p'])).toMatchObject({
+    expect(index.startProgram(['node', 'zqs', '-np'])).toMatchObject({
       pluginAdd: true,
       p: true,
     });
   });
   it('should remove a plugin', () => {
-    expect(index.startProgram(['node', 'zqs', '-P'])).toMatchObject({
+    expect(index.startProgram(['node', 'zqs', '-rp'])).toMatchObject({
       pluginRemove: true,
       P: true,
     });
