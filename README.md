@@ -34,12 +34,12 @@ zqs --api-add  -a
 
 > Add a plugin
 ```
-zqs --plugin-add -ap
+zqs --plugin-add -p
 ```
 
 > Remove a plugin
 ```
-zqs --plugin-remove -rp
+zqs --plugin-remove -r
 ```
 
 ## Test and deploy

@@ -5,15 +5,15 @@ import { add as addPlugin, remove as removePlugin } from './plugin';
 
 export function startProgram(argv: string[]): any {
   args
-    .option('new', '创建一个新的Zqs项目', 'n')
-    .option('api-add', '添加 api', 'a')
-    .option('plugin-add', '添加 plugin', 'ap')
-    .option('plugin-remove', '移除 plugin', 'rp');
+    .option('new', '创建一个新的Zqs项目')
+    .option('api-add', '添加 api')
+    .option('plugin-add', '添加 plugin')
+    .option('remove-plugin', '移除 plugin');
   const flags = args.parse(argv);
 
   if (flags.n) return newProject(flags);
   if (flags.a) return addApi(flags);
-  if (flags.ap) return addPlugin(flags);
-  if (flags.rp) return removePlugin(flags);
+  if (flags.p) return addPlugin(flags);
+  if (flags.r) return removePlugin(flags);
   return flags;
 }
