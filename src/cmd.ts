@@ -9,7 +9,7 @@ export function run(cmd: string, options?: SpawnOptions): Promise<any> {
       if (code !== 0) {
         return reject(new Error(`${command} process exited with code ${code}`));
       }
-      return resolve();
+      return resolve(code);
     });
     cp.on('error', err => {
       return reject(err);

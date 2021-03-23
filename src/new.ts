@@ -37,14 +37,14 @@ export async function newProject(flags: any, answers_?: any) {
       await fse.remove(`${cwd}/${flags.new}`);
     }
 
-    // clone git repo
-    await run(
-      `git clone https://github.com/ToolsZhang/zqs-base.git ${flags.new}`,
-      {
-        cwd: cwd,
-        stdio: 'inherit',
-      }
-    );
+    // clone git/gitee repo
+
+    // let github_repo = 'https://github.com/ToolsZhang/zqs-base.git';
+    let gitee_repo = 'https://gitee.com/ToolsZhang/zqs-base.git';
+    await run(`${gitee_repo} ${flags.new}`, {
+      cwd: cwd,
+      stdio: 'inherit',
+    });
 
     // rm .git
     await fse.remove(`${cwd}/${flags.new}/.git`);
