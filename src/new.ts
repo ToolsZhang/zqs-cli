@@ -39,8 +39,8 @@ export async function newProject(flags: any, answers_?: any) {
 
     // clone git/gitee repo
 
-    // let github_repo = 'https://github.com/ToolsZhang/zqs-base.git';
-    let gitee_repo = 'https://gitee.com/ToolsZhang/zqs-base.git';
+    // const github_repo = 'git clone https://github.com/ToolsZhang/zqs-base.git';
+    const gitee_repo = 'git clone https://gitee.com/ToolsZhang/zqs-base.git';
     await run(`${gitee_repo} ${flags.new}`, {
       cwd: cwd,
       stdio: 'inherit',
