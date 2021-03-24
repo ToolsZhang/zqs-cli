@@ -27,7 +27,7 @@ export async function add(flags: any, answers_?: any) {
 
   try {
     // npm install
-    await run(`node -v`, {
+    await run(`npm config get registry`, {
       cwd: `${cwd}`,
       stdio: 'inherit',
     });
