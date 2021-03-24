@@ -27,10 +27,6 @@ export async function add(flags: any, answers_?: any) {
 
   try {
     // npm install
-    await run(`npm config get registry`, {
-      cwd: `${cwd}`,
-      stdio: 'inherit',
-    });
     await run(`npm install zqs-plugin-${flags.plugin}`, {
       cwd: `${cwd}`,
       stdio: 'inherit',
