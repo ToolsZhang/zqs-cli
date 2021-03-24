@@ -1,6 +1,6 @@
 {
   "name": "zqserver-cli",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Zqs cli tool",
   "scripts": {
     "clean": "rimraf lib && rimraf coverage",
@@ -39,7 +39,6 @@
   },
   "homepage": "https://github.com/ToolsZhang/zqs-cli#readme",
   "dependencies": {
-    "@types/colors": "^1.2.1",
     "args": "^5.0.1",
     "colors": "^1.4.0",
     "english-article-classifier": "^1.0.1",
@@ -47,6 +46,7 @@
     "inquirer": "^6.5.2",
     "lodash": "^4.17.15",
     "pluralize": "^8.0.0",
+    "request": "^2.88.2",
     "request-promise": "^4.2.5",
     "rimraf": "^3.0.2"
   },

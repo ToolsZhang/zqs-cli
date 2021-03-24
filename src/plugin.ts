@@ -83,7 +83,7 @@ export async function remove(flags: any, answers_?: any) {
       await fse.remove(`${cwd}/src/plugins/${plugin}.ts`);
 
     // success
-    console.log('plugin', colors.red(flags.plugins.join(' ')), '已被安装');
+    console.log('plugin', colors.red(flags.plugins.join(' ')), '已被移除');
     return true;
   } catch (e) {
     console.error(e);
