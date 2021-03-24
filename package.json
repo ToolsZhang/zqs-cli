@@ -1,6 +1,6 @@
 {
   "name": "zqserver-cli",
-  "version": "0.0.9",
+  "version": "0.0.9-meta",
   "description": "Zqs cli tool",
   "scripts": {
     "clean": "rimraf lib && rimraf coverage",
